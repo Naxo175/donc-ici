@@ -9,17 +9,25 @@
     </head>
 
     <body>
-        <p style="font-family: Arial, Helvetica, sans-serif;">Lundi 8 avril 2024</p>
 
-        <div>
-            
+        <p style="font-family: Arial, Helvetica, sans-serif; text-align: center;"><u>Ces informations datent du Lundi 8 avril 2024.</u></p>
+
+        <div id="center">
             <h2>Aujourd'hui Mr Lhomme a dit</h2>
-            <h1 id="nb">216</h1>
+            <h1 id="nb">?</h1>
             <h2>fois "donc"</h2>
-            <h6 id="hier">17 de moins qu'il y a 3 jours</h6>
+            <h6 id="oldNb" style="color: transparent">17 de moins qu'il y a 3 jours</h6>
+            <h2 style="color: rgb(16, 68, 211)">ET</h2>
+            <h1 id="nb2">?</h1>
+            <h2>fois "ici"</h2>
+            <h6 id="oldNb2" style="color: transparent">6 de moins qu'il y a 3 jours</h6>
         </div>
 
+        <a href="https://instagram.com/combiendefoismrlhommeaditdonc_/"><p style="font-family: Arial, Helvetica, sans-serif; text-align: center;">👉 Instagram 👈</p></a>
+
         <script>
+            var doInterval2 = false;
+
             let number = 1;
 
             const interval = setInterval(() => {
@@ -28,16 +36,30 @@
 
                 if (number > 216) {
                     clearInterval(interval);
-                    document.body.classList.add('loaded');
+                    var oldNbElement = document.getElementById("oldNb");
+                    oldNbElement.style.color = "gray";
+                    oldNbElement.style.transition = "color 1s ease-in-out";
+                    doInterval2 = true;
                 }
             }, 1);
 
-            document.getElementById("hier").disabled = true;
-            var checkLoaded = setInterval(function() {
-                    if(document.querySelector("body").classList.contains("loaded")) {
-                            document.getElementById("hier").disabled = false;
-                        }
-                }, 1);
+            let number2 = 1;
+
+            const interval2 = setInterval(() => {
+                if(doInterval2 == true)
+                {
+                    document.getElementById("nb2").innerHTML = number2;
+                    number2++;
+
+                    if (number2 > 31) {
+                        clearInterval(interval2);
+                        var oldNbElement2 = document.getElementById("oldNb2");
+                        oldNbElement2.style.color = "gray";
+                        oldNbElement2.style.transition = "color 1s ease-in-out";
+
+                    }
+                }
+            }, 10);
         </script>
 
 
