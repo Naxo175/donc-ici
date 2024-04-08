@@ -33,13 +33,11 @@
             }, 1);
 
             document.getElementById("hier").disabled = true;
-            var checkLoaded = setInterval(function()
-              {
-                                              if(document.querySelector("body").classList.contains("loaded"))
-                                              {
-                                                  document.getElementById("hier").disabled = false;
-                                              }
-              }
+            var checkLoaded = setInterval(function() {
+                    if(document.querySelector("body").classList.contains("loaded")) {
+                            document.getElementById("hier").disabled = false;
+                        }
+                }, 1);
         </script>
 
 
