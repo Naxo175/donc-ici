@@ -16,7 +16,7 @@
             <h2>Aujourd'hui Mr Lhomme a dit</h2>
             <h1 id="nb">216</h1>
             <h2>fois "donc"</h2>
-            <h6>17 de moins qu'il y a 3 jours</h6>
+            <h6 id="hier">17 de moins qu'il y a 3 jours</h6>
         </div>
 
         <script>
@@ -31,6 +31,15 @@
                     document.body.classList.add('loaded');
                 }
             }, 1);
+
+            document.getElementById("hier").disabled = true;
+            var checkLoaded = setInterval(function()
+              {
+                                              if(document.querySelector("body").classList.contains("loaded"))
+                                              {
+                                                  document.getElementById("hier").disabled = false;
+                                              }
+              }
         </script>
 
 
