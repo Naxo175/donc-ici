@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <title>Donc & Cie™</title>
+    </head>
+
+    <body>
+        <p style="font-family: Arial, Helvetica, sans-serif;">Lundi 8 avril 2024</p>
+
+        <div>
+            
+            <h2>Aujourd'hui Mr Lhomme a dit</h2>
+            <h1 id="nb">216</h1>
+            <h2>fois "donc"</h2>
+            <h6>17 de moins qu'il y a 3 jours</h6>
+        </div>
+
+        <script>
+            let number = 1;
+
+            const interval = setInterval(() => {
+                document.getElementById("nb").innerHTML = number;
+                number++;
+
+                if (number > 216) {
+                    clearInterval(interval);
+                    document.body.classList.add('loaded');
+                }
+            }, 1);
+        </script>
+
+
+
+    </body>
+
+</html>

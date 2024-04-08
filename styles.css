@@ -1,0 +1,16 @@
+div {
+    text-align: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;    
+}
+
+h6 {
+    color: transparent;
+    transition: color 1s ease-in-out;
+}
+
+/* Apply gray color 1 second after page load */
+body.loaded h6 {
+    color: gray;
+}
